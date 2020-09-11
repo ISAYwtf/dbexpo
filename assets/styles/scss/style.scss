@@ -257,3 +257,58 @@ section {
     padding-bottom: 70px;
     align-items: flex-start;
 }
+
+.big-slider {
+    width: 100%;
+    height: 882px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    .swiper-container {
+        max-width: 1301px;
+        height: 100%;
+
+        .swiper-wrapper {
+
+            .swiper-slide {
+                background: black;
+                color: white;
+            }
+        }
+
+        .swiper__info {
+            max-width: 850px;
+            width: 66%;
+            height: 294px;
+
+            .swiper__txt {
+                width: 100%;
+
+                .small {
+                    font-size: 16px;
+                }
+            }
+
+            .swiper__buttons {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .swiper--left,
+    .swiper--right {
+        max-width: 797px;
+        height: 540px;
+        position: absolute;
+    }
+
+    .swiper--left {
+        left: -30%;
+        bottom: 0;
+    }
+
+    .swiper--right {
+        right: -30%;
+    }
+}

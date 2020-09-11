@@ -296,4 +296,61 @@ section {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+
+.big-slider {
+  width: 100%;
+  height: 882px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.big-slider .swiper-container {
+  max-width: 1301px;
+  height: 100%;
+}
+
+.big-slider .swiper-container .swiper-wrapper .swiper-slide {
+  background: black;
+  color: white;
+}
+
+.big-slider .swiper-container .swiper__info {
+  max-width: 850px;
+  width: 66%;
+  height: 294px;
+}
+
+.big-slider .swiper-container .swiper__info .swiper__txt {
+  width: 100%;
+}
+
+.big-slider .swiper-container .swiper__info .swiper__txt .small {
+  font-size: 16px;
+}
+
+.big-slider .swiper-container .swiper__info .swiper__buttons {
+  margin-bottom: 0;
+}
+
+.big-slider .swiper--left,
+.big-slider .swiper--right {
+  max-width: 797px;
+  height: 540px;
+  position: absolute;
+}
+
+.big-slider .swiper--left {
+  left: -30%;
+  bottom: 0;
+}
+
+.big-slider .swiper--right {
+  right: -30%;
+}
 /*# sourceMappingURL=style.css.map */

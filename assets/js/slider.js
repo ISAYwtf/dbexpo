@@ -1,4 +1,4 @@
-let sliders = document.querySelectorAll('.swiper-container');
+let sliders = document.querySelectorAll('.slider');
 
 sliders.forEach(el => {
     let mySwiper = new Swiper('.swiper-container', {
