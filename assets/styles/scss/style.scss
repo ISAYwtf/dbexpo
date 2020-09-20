@@ -438,3 +438,54 @@ section {
     justify-content: space-between;
     align-items: center;
 }
+
+footer {
+    background: black;
+    padding: 100px 0;
+
+    .wrap {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer__logo {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin-left: 15px;
+            font-size: 64px;
+            font-weight: 300;
+        }
+    }
+
+    .footer__menu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 130px;
+        width: 370px;
+        padding-bottom: -15px;
+
+        a {
+            margin-bottom: 15px;
+            margin-right: 120px;
+            color: white;
+            font-size: 22px;
+        }
+    }
+
+    .footer__contacts {
+        display: flex;
+        flex-direction: column;
+        height: 175px;
+        justify-content: space-between;
+        max-width: 250px;
+
+        a {
+            font-size: 22px;
+            font-weight: 300;
+            color: white;
+        }
+    }
+}
