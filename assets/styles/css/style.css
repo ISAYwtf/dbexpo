@@ -516,6 +516,52 @@ section {
           align-items: center;
 }
 
+.contacts {
+  width: 100%;
+}
+
+.contacts .map {
+  width: 100%;
+  height: 726px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(161, 152, 100, 0.4)), to(rgba(161, 152, 100, 0))), url("../../img/map.png");
+  background: linear-gradient(180deg, rgba(161, 152, 100, 0.4) 0%, rgba(161, 152, 100, 0) 100%), url("../../img/map.png");
+}
+
+.contacts .wrap {
+  padding: 40px 87px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 60px;
+}
+
+.contacts__info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 580px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contacts__info div a, .contacts__info div p {
+  font-size: 18;
+  font-weight: 300;
+}
+
 footer {
   background: black;
   padding: 100px 0;
