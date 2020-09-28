@@ -25,7 +25,7 @@ a {
 
 .title h2 {
   font-size: 50px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 120%;
 }
 
@@ -38,8 +38,14 @@ img {
   display: -ms-flexbox;
   display: flex;
   max-width: 1301px;
-  width: 68%;
+  width: 96%;
   margin: auto auto;
+}
+
+@media (max-width: 1024px) {
+  .wrap {
+    max-width: 964px;
+  }
 }
 
 .gradient-txt {
@@ -55,7 +61,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 header .wrap {
@@ -67,10 +73,43 @@ header .wrap {
           align-items: center;
   font-size: 22px;
   padding: 30px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media (max-width: 1024px) {
+  header .wrap {
+    font-size: 16px;
+    padding: 5px 0;
+  }
 }
 
 header .wrap .header__logo {
   width: 65px;
+  height: 78px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+@media (max-width: 1024px) {
+  header .wrap .header__logo {
+    width: 147px;
+    min-width: 47px;
+    height: 57px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 768px) {
+  header .wrap .header__logo {
+    max-width: 112px;
+    width: 17%;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 768px) and (max-width: 560px) {
+  header .wrap .header__logo {
+    width: 10%;
+  }
 }
 
 header .wrap .header__menu {
@@ -84,9 +123,28 @@ header .wrap .header__menu {
   width: 67%;
 }
 
+@media (max-width: 1024px) {
+  header .wrap .header__menu {
+    width: 90%;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 768px) {
+  header .wrap .header__menu {
+    padding-left: 20px;
+  }
+}
+
 header .wrap .header__phone {
   margin: 0;
   font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  header .wrap .header__phone {
+    display: none;
+  }
 }
 
 a.logo {
