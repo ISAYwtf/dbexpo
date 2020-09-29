@@ -18,6 +18,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -27,6 +33,12 @@ a {
   font-size: 50px;
   font-weight: 500;
   line-height: 120%;
+}
+
+@media (max-width: 1024px) {
+  .title h2 {
+    font-size: 40px;
+  }
 }
 
 img {
@@ -80,7 +92,23 @@ header .wrap {
 @media (max-width: 1024px) {
   header .wrap {
     font-size: 16px;
-    padding: 5px 0;
+    padding: 5px 30px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 560px) {
+  header .wrap {
+    padding: 20px 30px;
+  }
+}
+
+header .wrap .logo {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  header .wrap .logo {
+    display: unset;
   }
 }
 
@@ -108,7 +136,9 @@ header .wrap .header__logo {
 
 @media (max-width: 1024px) and (max-width: 768px) and (max-width: 560px) {
   header .wrap .header__logo {
-    width: 10%;
+    width: 6%;
+    min-width: 28px;
+    height: 32px;
   }
 }
 
@@ -136,6 +166,12 @@ header .wrap .header__menu {
   }
 }
 
+@media (max-width: 1024px) and (max-width: 768px) and (max-width: 560px) {
+  header .wrap .header__menu {
+    display: none;
+  }
+}
+
 header .wrap .header__phone {
   margin: 0;
   font-weight: 500;
@@ -159,6 +195,21 @@ a.logo {
   font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+  a.logo {
+    font-size: 40px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 560px) {
+  a.logo {
+    display: none;
+    font-size: 28px;
+    font-weight: normal;
+  }
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,7 +228,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   max-width: 1607px;
-  width: 84%;
+  width: 98%;
 }
 
 .section__info {
@@ -198,6 +249,12 @@ section {
   width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .about {
+    padding-top: 5px;
+  }
+}
+
 .about__title {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -209,12 +266,48 @@ section {
   font-weight: 400;
 }
 
+@media (max-width: 1024px) {
+  .about__title h3 {
+    font-size: 20px;
+  }
+}
+
 .about__wrap {
   margin-top: 42px;
 }
 
+@media (max-width: 768px) {
+  .about__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about__wrap .title {
+    margin-bottom: 0;
+  }
+}
+
 .about__wrap .title h2 {
   font-size: 40px;
+}
+
+@media (max-width: 1024px) {
+  .about__wrap .title h2 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 768px) {
+  .about__wrap .title h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .about__img {
@@ -234,7 +327,19 @@ section {
           align-items: flex-end;
 }
 
+.letters {
+  padding-top: 150px;
+  padding-bottom: 145px;
+}
+
+@media (max-width: 1024px) {
+  .letters {
+    padding: 150px 30px 145px 30px;
+  }
+}
+
 .letters__wrap {
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -242,14 +347,53 @@ section {
   padding-left: 93px;
 }
 
+@media (max-width: 1024px) {
+  .letters__wrap {
+    padding-left: 0;
+  }
+}
+
+.letters__info {
+  width: 100%;
+}
+
+.letters__info .section__text {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .letters__info .section__text {
+    background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), color-stop(58.82%, #FFFFFF), to(rgba(255, 254, 254, 0)));
+    background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 58.82%, rgba(255, 254, 254, 0) 100%);
+  }
+}
+
 .letters__info p {
   max-width: 860px;
   padding-left: 60px;
 }
 
+@media (max-width: 1024px) {
+  .letters__info p {
+    width: 100%;
+    padding-left: 146px;
+  }
+}
+
 .letters__img {
   max-width: 415px;
   width: 29%;
+}
+
+@media (max-width: 1024px) {
+  .letters__img {
+    position: absolute;
+    right: 0;
+    opacity: 0.3;
+    width: 415px;
+    z-index: 0;
+  }
 }
 
 .slider {

@@ -16,8 +16,6 @@ if (window.screen.width > 768 && window.screen.width <= 1024) {
 window.addEventListener('resize', () => {
     if (window.screen.width > 560 && window.screen.width <= 1024) {
         logo.style.width = logoWidthPercent + '%';
-    } else if (window.screen.width <= 560) {
-        logo.style.width = 10 + '%';
     }
     logoWidth = logo.clientWidth;
 }, false);
