@@ -275,7 +275,8 @@ section {
     }
 
     &__info {
-        width: 100%;
+        // width: 100%;
+        margin-left: 40px;
 
         .section__text {
             position: relative;
@@ -293,6 +294,10 @@ section {
             @media (max-width: 1024px) {
                 width: 100%;
                 padding-left: 146px;
+
+                @media (max-width: 560px) {
+                    padding-left: 40px;
+                }
             }
         }
     }
@@ -315,6 +320,10 @@ section {
     width: 100%;
     height: 832px;
     position: relative;
+
+    @media (max-width: 1024px) {
+        height: 444px;
+    }
 
     .swiper-container {
         width: 100%;
@@ -345,9 +354,14 @@ section {
             padding: 40px 0 0 40px;
             z-index: 15;
 
+            @media (max-width: 1024px) {
+                height: 210px;
+                padding: 20px 0 0 20px;
+            }
+
             .swiper__txt {
                 max-width: 749px;
-                width: 71%;
+                width: 92%;
 
                 &--item {
                     display: none;
@@ -356,6 +370,10 @@ section {
                     h4 {
                         font-size: 22px;
                         font-weight: 400;
+
+                        @media (max-width: 1024px) {
+                            font-size: 20px;
+                        }
                     }
 
                     p {
@@ -376,6 +394,10 @@ section {
                 margin-bottom: 30px;
                 justify-content: space-between;
 
+                @media (max-width: 1024px) {
+                    height: 40px;
+                }
+
                 .swiper-next,
                 .swiper-prev {
                     display: flex;
@@ -390,6 +412,19 @@ section {
                     color: $txtClr;
                     margin-top: 0;
                     transition: 0.4s;
+
+                    @media (max-width: 1024px) {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    svg {
+
+                        @media (max-width: 1024px) {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
                 }
 
                 .swiper-button-disabled {
@@ -404,6 +439,14 @@ section {
     padding-top: 200px;
     padding-bottom: 70px;
     align-items: flex-start;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 225px;
+
+        @media (max-width: 560px) {
+            padding-bottom: 130px;
+        }
+    }
 }
 
 .big-slider {
@@ -412,6 +455,14 @@ section {
     display: flex;
     flex-direction: row;
     position: relative;
+
+    @media (max-width: 1024px) {
+        height: 451px;
+
+        @media (max-width: 560px) {
+            height: 280px;
+        }
+    }
 
     .swiper-container {
         max-width: 1301px;
@@ -427,14 +478,37 @@ section {
 
         .swiper__info {
             max-width: 850px;
-            width: 66%;
+            width: 82%;
             height: 294px;
+
+            @media (max-width: 1024px) {
+                width: 92%;
+                height: 190px;
+                background: rgba(255, 255, 255, 1);
+                // background: linear-gradient(to top, rgba(255, 255, 255, 1) 1%, #FFFFFF 60%, rgba(255, 255, 255, 0) 98% 99.7%, rgba(255, 254, 255, 1) 99.99% 100%);
+
+
+                @media (max-width: 560px) {
+                    height: 122px;
+                }
+            }
 
             .swiper__txt {
                 width: 100%;
 
                 .small {
                     font-size: 16px;
+
+                    @media (max-width: 1024px) {
+                        font-size: 12px;
+                    }
+                }
+
+                br {
+
+                    @media (max-width: 1024px) {
+                        display: none;
+                    }
                 }
             }
 
@@ -447,8 +521,25 @@ section {
     .swiper--left,
     .swiper--right {
         max-width: 797px;
+        width: 43%;
         height: 540px;
         position: absolute;
+
+        @media (max-width: 1024px) {
+            height: 296px;
+
+            @media (max-width: 560px) {
+                display: none;
+            }
+        }
+    }
+
+    .center-swiper {
+        width: 71%;
+
+        @media (max-width: 560px) {
+            width: 100%;
+        }
     }
 
     .swiper--left {
@@ -468,9 +559,22 @@ section {
     width: 100%;
     position: relative;
 
+    @media (max-width: 1024px) {
+        padding-top: 150px;
+        padding-bottom: 100px;
+
+        @media (max-width: 560px) {
+            padding-bottom: 50px;
+        }
+    }
+
     .title {
         align-self: flex-start;
         margin-left: 306px;
+
+        @media (max-width: 1024px) {
+            margin-left: 30px;
+        }
 
         h2 {
             font-weight: 500;
@@ -483,34 +587,77 @@ section {
         max-width: unset;
         background: linear-gradient(180deg, rgba(160, 139, 20, 0.4) 0%, rgba(218, 187, 23, 0.184) 63.02%, rgba(218, 186, 23, 0.4) 97.91%, rgba(218, 187, 23, 0) 97.92%);
         padding: 0 394px;
+        padding-left: 20%;
+
+        @media (max-width: 1024px) {
+            background: none;
+            padding: 0 0 0 176px;
+
+            @media (max-width: 768px) {
+                background: none;
+                padding-left: 100px;
+            }
+        }
 
         .letters__img {
             position: absolute;
-            top: 175px;
+            width: 23%;
+            top: -169px;
             right: 72px;
+            z-index: 0;
+
+            @media (max-width: 1024px) {
+                right: 0;
+                top: -120px;
+                width: 470px;
+                max-width: unset;
+            }
         }
     }
 
+    .letters__info {
+        margin-left: 0;
+    }
+
     .section__info {
+        position: relative;
         width: 100%;
+        z-index: 1;
+
+        @media (max-width: 1024px) {
+            background: linear-gradient(89.6deg, rgba(255, 255, 255, 0) 0.35%, rgba(255, 255, 255, 0.6) 10%, #FFFFFF 52.09%, rgba(255, 254, 254, 0) 99.69%);
+            max-width: 686px;
+        }
     }
 
     &__block {
-        height: 520px;
+        // height: 520px;
+        height: unset;
         width: 100%;
 
         .swiper-container {
-            width: 880px;
+            max-width: 880px;
+            width: 100%;
             margin: 0;
+            z-index: 1;
 
             .swiper-wrapper {
                 margin-top: 50px;
-                height: 240px;
+                // height: 240px;
+
+            @media (max-width: 1024px) {
+                margin-top: 30px;
+            }
 
                 .swiper-slide {
                     background: none;
                     color: $txtClr;
                     flex-direction: column;
+                    padding-right: 15px;
+
+                    @media (max-width: 1024px) {
+                        // background: linear-gradient(89.6deg, rgba(255, 255, 255, 0) 0.35%, rgba(255, 255, 255, 0.6) 10%, #FFFFFF 52.09%, rgba(255, 254, 254, 0) 99.69%);
+                    }
 
                     p {
                         padding: 0;
@@ -522,11 +669,13 @@ section {
                 display: flex;
                 justify-content: space-between;
                 cursor: pointer;
-                margin-top: 120px;
-                margin-left: 77px;
+                margin: 40px 0 50px 77px;
                 width: 170px;
-                height: 5px;
                 position: relative;
+
+                @media (max-width: 1024px) {
+                    margin: 40px 0 0 0;
+                }
 
                 .news-swiper-next,
                 .news-swiper-prev {
@@ -545,9 +694,13 @@ section {
 .gallery {
     width: 100%;
     display: grid;
-    grid-template-columns: 581px 515px 745px;
-    grid-template-rows: 578px 696px;
+    grid-template-columns: minmax(160px, 581px) minmax(200px, 515px) minmax(250px, 745px);
+    grid-template-rows: minmax(200px, 500px) minmax(250px, 600px);
     grid-gap: 40px;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 
     grid-template-areas:
     "gorizontal gorizontal big-vertical"
@@ -568,15 +721,40 @@ section {
     div:nth-child(4) {
         grid-area: vertical-center;
     }
+
+    div img {
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .partners {
-    padding: 200px 115px;
+    padding: 200px 80px;
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        padding: 100px 50px 150px;
+
+        @media (max-width: 768px) {
+            padding: 80px 30px;
+
+            @media (max-width: 560px) {
+                padding: 50px 30px;
+            }
+        }
+    }
+
+    div {
+        margin: 0 30px;
+
+        @media (max-width: 768px) {
+            margin: 0 15px;
+        }
+    }
 }
 
 .contacts {
@@ -616,19 +794,38 @@ footer {
     background: black;
     padding: 100px 0;
 
+    @media (max-width: 1024px) {
+        padding: 20px 0;
+    }
+
     .wrap {
         align-items: center;
         justify-content: space-between;
     }
 
     .footer__logo {
+        position: relative;
         display: flex;
         align-items: center;
+
+        img {
+
+            // @media (max-width: 1024px) {
+            //     position: absolute;
+            //     width: 147px;
+            //     top: -113px;
+            // }
+        }
 
         a {
             margin-left: 15px;
             font-size: 64px;
             font-weight: 300;
+
+            // @media (max-width: 1024px) {
+            //     // position: relative;
+            //     margin-left: 160px;
+            // }
         }
     }
 
@@ -637,14 +834,24 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
         height: 130px;
-        width: 370px;
-        padding-bottom: -15px;
+        max-width: 370px;
+        width: 29%;
+
+        @media (max-width: 1024px) {
+            height: 100px;
+        }
 
         a {
             margin-bottom: 15px;
-            margin-right: 120px;
+            margin-right: 25%;
             color: white;
             font-size: 22px;
+
+            @media (max-width: 1024px) {
+                font-size: 15px;
+                margin-bottom: 8px;
+                margin-right: 23%;
+            }
         }
     }
 
@@ -655,10 +862,18 @@ footer {
         justify-content: space-between;
         max-width: 250px;
 
+        @media (max-width: 1024px) {
+            height: 100px;
+        }
+
         a {
             font-size: 22px;
             font-weight: 300;
             color: white;
+
+            @media (max-width: 1024px) {
+                font-size: 15px;
+            }
         }
     }
 }
