@@ -68,6 +68,7 @@ header {
     background: rgba(255, 255, 255, 0.95);
 
     .wrap {
+        position: relative;
         justify-content: space-between;
         align-items: center;
         font-size: 22px;
@@ -80,6 +81,8 @@ header {
 
             @media (max-width: 560px) {
                 padding: 20px 30px;
+                width: 100%;
+                margin: 0;
             }
         }
 
@@ -112,6 +115,15 @@ header {
                     }
                 }
             }
+
+            svg {
+                width: 100%;
+                height: 100%;
+
+                line, path {
+                    transition: 0.4s;
+                }
+            }
         }
 
         .header__menu {
@@ -119,6 +131,7 @@ header {
             justify-content: space-between;
             max-width: 870px;
             width: 67%;
+            transition: 0.4s;
 
             @media (max-width: 1024px) {
                 width: 90%;
@@ -128,8 +141,34 @@ header {
                     padding-left: 20px;
 
                     @media (max-width: 560px) {
-                        display: none;
+                        position: fixed;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        top: 74px;
+                        right: 0;
+                        height: 300px;
+                        width: 50%;
+                        margin-left: -30px;
+                        background: rgba(255, 255, 255, 0.95);
+                        border-radius: 0 0 0 3px;
+
+                        @media (max-width: 414px) {
+                            width: 70%;
+                        }
                     }
+                }
+            }
+
+            &[data-show="false"] {
+                @media (max-width: 560px) {
+                    // display: none;
+                    opacity: 0;
+                }
+            }
+
+            &--hide {
+                @media (max-width: 560px) {
+                    display: none;
                 }
             }
         }
@@ -808,24 +847,10 @@ footer {
         display: flex;
         align-items: center;
 
-        img {
-
-            // @media (max-width: 1024px) {
-            //     position: absolute;
-            //     width: 147px;
-            //     top: -113px;
-            // }
-        }
-
         a {
             margin-left: 15px;
             font-size: 64px;
             font-weight: 300;
-
-            // @media (max-width: 1024px) {
-            //     // position: relative;
-            //     margin-left: 160px;
-            // }
         }
     }
 
