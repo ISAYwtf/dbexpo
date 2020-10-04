@@ -33,19 +33,31 @@
 //     });
 // });
 
+// Функция для изменения текста в зависимости от текущего слайда
 let fadeTxt = (index, slider) => {
-    let slideTxt = slider.querySelectorAll(".swiper__txt--item");
+    let slideTxt;
+    if (window.screen.width > 560) {
+        slideTxt = slider.querySelector('.swiper__txt').querySelectorAll(".swiper__txt--item");
+    } else if (window.screen.width <= 560) {
+        slideTxt = slider.querySelector('.swiper__txt--media').querySelectorAll(".swiper__txt--item");
+    } else {
+        slideTxt = undefined;
+    }
 
-    slideTxt.forEach(item => {
-        item.classList.remove("swiper__txt--active");
-    });
-    slideTxt[index].classList.add("swiper__txt--active");
+    if (slideTxt) {
+        slideTxt.forEach(item => {
+            item.classList.remove("swiper__txt--active");
+        });
+        slideTxt[index].classList.add("swiper__txt--active");
+    }
 };
 
+// Все слайдеры со страницы
 let sliderOffer = document.querySelector('.slider-offer'),
     bigSlider = document.querySelector('.big-slider'),
     newSlider = document.querySelector('.news-slider');
 
+// Слайдер Услуги
 let swiperOffer = new Swiper('.swiper-offer', {
     // Optional parameters
     setWrapperSize: true,
@@ -62,10 +74,14 @@ let swiperOffer = new Swiper('.swiper-offer', {
         nextEl: '.swiper-offer-next',
         prevEl: '.swiper-offer-prev',
     },
+    on: {
+        slideChange: function() {
+            fadeTxt(this.activeIndex, sliderOffer);
+        }
+    }
 });
 
-swiperOffer.on('slideChange', () => fadeTxt(swiperOffer.activeIndex, sliderOffer));
-
+//Тройной слайдер в разделе Работы
 let bigSwiper = new Swiper('.big-swiper', {
     // Optional parameters
     setWrapperSize: true,
@@ -82,28 +98,33 @@ let bigSwiper = new Swiper('.big-swiper', {
         nextEl: '.big-swiper-next',
         prevEl: '.big-swiper-prev',
     },
+    on: {
+        slideChange: function() {
+            fadeTxt(this.activeIndex, bigSlider);
+        }
+    }
 });
 
-let centerBigSwiper = new Swiper('.center-swiper', {
-    // Optional parameters
-    setWrapperSize: true,
-    slidesPerView: '1',
-    centeredSlides: true,
+//Центральный слайдер в разделе Работы
+// let centerBigSwiper = new Swiper('.center-swiper', {
+//     // Optional parameters
+//     setWrapperSize: true,
+//     slidesPerView: '1',
+//     centeredSlides: true,
 
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: true
-    },
+//     autoplay: {
+//         delay: 5000,
+//         disableOnInteraction: true
+//     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.big-swiper-next',
-        prevEl: '.big-swiper-prev',
-    },
-});
+//     // Navigation arrows
+//     navigation: {
+//         nextEl: '.big-swiper-next',
+//         prevEl: '.big-swiper-prev',
+//     }
+// });
 
-centerBigSwiper.on('slideChange', () => fadeTxt(centerBigSwiper.activeIndex, bigSlider));
-
+//Слайдер Новости
 let newSwiper = new Swiper('.news-swiper', {
     // Optional parameters
     setWrapperSize: true,
